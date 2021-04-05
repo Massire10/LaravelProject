@@ -40,4 +40,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function recipes()
+    {
+        return $this->hasMany(Recipe::class, 'id', 'author_id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comments::class, 'id', 'comments_id');
+    }
+
 }

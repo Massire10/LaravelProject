@@ -30,7 +30,7 @@
                         <router-link class="nav-link" to="/recettes">Recettes</router-link>
                     </li>
                     <li class="nav-item dropdown">
-                        <router-link to="/ingredients" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recettes</router-link>
+                        <router-link to="/ingredients" class="nav-link dropdown-toggle disabled" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recettes</router-link>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <router-link class="dropdown-item" to="/">Recettes</router-link>
                             <router-link class="dropdown-item" to="/">Recettes</router-link>
@@ -39,7 +39,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link disabled" to="/" tabindex="-1" aria-disabled="true">Recettes</router-link>
+                        <router-link class="nav-link" to="/contact" tabindex="-1" aria-disabled="true">Contact</router-link>
                     </li>
                     </ul>
                     <!-- <form class="form-inline my-2 my-lg-0">

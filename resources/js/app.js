@@ -13,6 +13,7 @@ Vue.use(VueRouter);
 
 //Vue.component('home-component', require('./components/HomeComponent.vue').default);
 import Home from './components/HomeComponent.vue';
+import Contact from './components/ContactComponent.vue';
 import Recipes from './components/recipes/RecipeListComponent.vue';
 
 const routes = [
@@ -23,6 +24,10 @@ const routes = [
     {
         path: '/recettes',
         component: Recipes
+    },
+    {
+        path: '/contact',
+        component: Contact
     }
 ];
 

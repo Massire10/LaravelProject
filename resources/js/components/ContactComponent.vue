@@ -27,6 +27,7 @@
 <script>
 import Swal from 'sweetalert2'
     export default {
+        name: 'ContactComponent',
         mounted() {
             console.log('Component mounted.')
         },
@@ -43,3 +44,6 @@ import Swal from 'sweetalert2'
         }
     }
 </script>
+
+<style>
+</style>

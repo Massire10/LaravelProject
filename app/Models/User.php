@@ -16,6 +16,9 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $primaryKey = 'id';
+    protected $table = 'users';
+    public $timestamps = true;
     protected $fillable = [
         'name',
         'email',
@@ -43,7 +46,7 @@ class User extends Authenticatable
 
     public function recipes()
     {
-        return $this->hasMany(Recipe::class, 'id', 'author_id');
+        return $this->hasMany(Recipes::class, 'id', 'author_id');
     }
 
     public function comments()

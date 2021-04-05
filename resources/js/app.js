@@ -22,7 +22,7 @@ const routes = [
         component: Home
     },
     {
-        path: '/recettes',
+        path: '/recipes',
         component: Recipes
     },
     {

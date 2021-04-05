@@ -19,24 +19,29 @@ import Recipes from './components/recipes/RecipeListComponent.vue';
 const routes = [
     {
         path: '/home',
+        name: 'home',
         component: Home
     },
     {
         path: '/recettes',
+        name: 'recette',
         component: Recipes
     },
     {
         path: '/contact',
+        name: 'contact',
         component: Contact
     }
 ];
 
-const router = new VueRouter({routes});
+const router = new VueRouter({
+    mode: 'history',
+    routes
+});
 
 
 const app = new Vue({
     el: '#app',
-    mode: 'history',
     router: router
 });
 

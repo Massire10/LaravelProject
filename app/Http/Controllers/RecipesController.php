@@ -23,6 +23,7 @@ class RecipesController extends Controller
     {
         try{
             $recipes = $this->recipes_repository->index();
+            return $recipes;
         }catch(\Exception $exception){
 
         }

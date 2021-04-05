@@ -27,7 +27,7 @@
                         <router-link class="nav-link" to="/home">Accueil<span class="sr-only">(current)</span></router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/recettes">Recettes</router-link>
+                        <router-link class="nav-link" to="/recipes">Recettes</router-link>
                     </li>
                     <li class="nav-item dropdown">
                         <router-link to="/ingredients" class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recettes</router-link>

@@ -21,7 +21,7 @@ class CreateRecipesTable extends Migration
             $table->string('url');
             $table->string('tags');
             $table->string('status');
-            $table->unsignedBigInteger('author_id')->unique();
+            $table->unsignedBigInteger('author_id');
             $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
             $table->date('date');
             $table->timestamps();

@@ -11,6 +11,7 @@ class Comments extends Model
 
     protected $primaryKey = 'id';
     protected $table = 'comments';
+    public $timestamps = true;
 
     protected $fillable = [
         'content',

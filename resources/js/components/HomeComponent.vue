@@ -3,10 +3,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">My App</div>
+                    <div class="card-header">My shop</div>
 
                     <div class="card-body">
-                        Bienvenue
+                        Bienvenudfshghdjg
                     </div>
                 </div>
             </div>

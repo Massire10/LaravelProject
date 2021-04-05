@@ -11,6 +11,7 @@ class Recipes extends Model
 
     protected $primaryKey = 'id';
     protected $table = 'recipes';
+    public $timestamps = true;
 
 
     protected $fillable = [

@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['middleware' => 'api', 'namespace'  => 'App\Http\Controllers', 'prefix' => 'recipes'], function () {
-    Route::get('/', 'AuthController@index');
-    Route::get('/{id}', 'AuthController@show');
+    Route::get('/', 'RecipesController@index');
+    Route::get('/{id}', 'RecipesController@show');
+    Route::post('/', 'RecipesController@store');
+    Route::put('/', 'RecipesController@update');
 });

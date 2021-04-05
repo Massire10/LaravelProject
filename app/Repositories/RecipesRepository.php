@@ -18,8 +18,8 @@ class RecipesRepository
     {
         return QueryBuilder::for(Recipes::class)
             ->allowedFilters([
-                Filter::exact('region_id'),
-                Filter::exact('department_id')
+                Filter::partial('title'),
+                Filter::partial('content'),
             ])
             ->get();
     }

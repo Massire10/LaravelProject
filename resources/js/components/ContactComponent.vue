@@ -16,8 +16,15 @@
 
 <script>
     export default {
+        name: 'ContactComponent',
         mounted() {
             console.log('Component mounted.')
         }
     }
 </script>
+
+<style>
+.container {
+  margin-top: 150px;
+}
+</style>

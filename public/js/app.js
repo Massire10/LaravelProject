@@ -1875,6 +1875,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'ContactComponent',
   mounted: function mounted() {
     console.log('Component mounted.');
   },
@@ -2058,20 +2059,23 @@ Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_0__.default); //Vue.component('home-
 
 var routes = [{
   path: '/home',
+  name: 'home',
   component: _components_HomeComponent_vue__WEBPACK_IMPORTED_MODULE_1__.default
 }, {
-  path: '/recipes',
+  path: '/recettes',
+  name: 'recette',
   component: _components_recipes_RecipeListComponent_vue__WEBPACK_IMPORTED_MODULE_3__.default
 }, {
   path: '/contact',
+  name: 'contact',
   component: _components_ContactComponent_vue__WEBPACK_IMPORTED_MODULE_2__.default
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__.default({
+  mode: 'history',
   routes: routes
 });
 var app = new Vue({
   el: '#app',
-  mode: 'history',
   router: router
 });
 

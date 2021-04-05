@@ -15,7 +15,7 @@
     <body class="antialiased">
         <div id="app">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            
+
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
                         <router-link class="nav-link" to="/home">Accueil<span class="sr-only">(current)</span></router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/recipes">Recettes</router-link>
+                        <router-link class="nav-link" to="/recettes">Recettes</router-link>
                     </li>
                     <li class="nav-item dropdown">
                         <router-link to="/ingredients" class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recettes</router-link>
@@ -51,7 +51,7 @@
             <div class="container">
                 <router-view></router-view>
             </div>
-            
+
         </div>
         <script src="{{ asset('js/app.js')}}"></script>
     </body>

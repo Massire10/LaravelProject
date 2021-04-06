@@ -39,13 +39,14 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/contact">Contact</router-link>
+
                     </li>
                     </ul>
-                    <!-- <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form> -->
+                    <form class="form-inline my-2 my-lg-0">
+                        <router-link to="/login">
+                            <a class="text-white my-2 my-sm-0" onClick="logout()">Se déconnecter</a>
+                        </router-link>
+                    </form>
                 </div>
             </nav>
             <div class="container">
@@ -53,6 +54,13 @@
             </div>
 
         </div>
+        <script type="text/javascript" >
+
+            function logout (){
+               this.$cookies.remove('token');
+                console.log('ref', this)
+            }
+        </script>
         <script src="{{ asset('js/app.js')}}"></script>
     </body>
 </html>

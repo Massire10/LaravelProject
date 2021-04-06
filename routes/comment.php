@@ -18,4 +18,5 @@ Route::group(['middleware' => 'api', 'namespace'  => 'App\Http\Controllers', 'pr
     Route::get('/', 'CommentController@index');
     Route::get('/{id}', 'CommentController@show');
     Route::post('/', 'CommentController@store');
+    Route::put('/{id}', 'CommentController@update');
 });

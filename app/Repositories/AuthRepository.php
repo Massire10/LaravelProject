@@ -110,11 +110,16 @@ class AuthRepository
      */
     protected function respondWithToken($token)
     {
+
+        $user = auth()->user();
+
         return response()->json(
             [
                 'token'          => $token,
                 'token_type'     => 'bearer',
                 'token_validity' => ($this->guard()->factory()->getTTL() * 60),
+                'user' => $user,
+                'has_roles' => $user->getRoleNames()
             ]
         );
     }

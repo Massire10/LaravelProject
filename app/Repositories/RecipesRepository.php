@@ -21,7 +21,7 @@ class RecipesRepository
                 Filter::partial('title'),
                 Filter::partial('content'),
             ])
-            ->get();
+            ->jsonPaginate();
     }
 
     public function show($id)
@@ -33,19 +33,19 @@ class RecipesRepository
 
     public function store($request)
     {
-        $bank_agency = new Recipes();
-        $bank_agency->fill($request);
-        $bank_agency->save();
+        $recipes = new Recipes();
+        $recipes->fill($request);
+        $recipes->save();
 
-        return $bank_agency;
+        return $recipes;
     }
 
     public function update($request, $id)
     {
-        $bank_agency = Recipes::findOrFail($id);
-        $bank_agency->fill($request);
-        $bank_agency->save();
+        $recipes = Recipes::findOrFail($id);
+        $recipes->fill($request);
+        $recipes->save();
 
-        return $bank_agency;
+        return $recipes;
     }
 }

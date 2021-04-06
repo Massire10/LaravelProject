@@ -16,7 +16,7 @@ class Comments extends Model
     protected $fillable = [
         'content',
         'author_id',
-        'recipes_id',
+        'recipe_id',
         'date',
         'updated_at'
     ];
@@ -25,7 +25,7 @@ class Comments extends Model
         'id',
         'content',
         'author_id',
-        'recipes_id',
+        'recipe_id',
         'date',
         'updated_at',
         'created_at'

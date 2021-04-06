@@ -23,9 +23,9 @@ class RecipesController extends Controller
     {
         try{
             $recipes = $this->recipes_repository->index();
-            return $recipes;
+            return response()->json(['success' => true, 'recipes' => $recipes], 200);
         }catch(\Exception $exception){
-
+            return response()->json(['success' => false, $exception->getMessage()], $exception->getCode());
         }
     }
 
@@ -40,8 +40,9 @@ class RecipesController extends Controller
     {
         try{
             $recipes = $this->recipes_repository->store($request);
+            return response()->json(['success' => true, 'recipes' => $recipes], 200);
         }catch(\Exception $exception){
-
+            return response()->json(['success' => false, $exception->getMessage()], $exception->getCode());
         }
     }
 
@@ -55,8 +56,9 @@ class RecipesController extends Controller
     {
         try{
             $recipes = $this->recipes_repository->show($id);
+            return response()->json(['success' => true, 'recipes' => $recipes], 200);
         }catch(\Exception $exception){
-
+            return response()->json(['success' => false, $exception->getMessage()], $exception->getCode());
         }
     }
 }

@@ -32,14 +32,13 @@
                     <li class="nav-item dropdown">
                         <router-link to="/ingredients" class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recettes</router-link>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <router-link class="dropdown-item" to="/contact">Recettes</router-link>
-                            <router-link class="dropdown-item" to="/">Recettes</router-link>
+                            <router-link class="dropdown-item" to="/ajout">Ajouter recettes</router-link>
+                            <router-link class="dropdown-item" to="/">Liste des recettes</router-link>
                         <div class="dropdown-divider"></div>
-                        <router-link class="dropdown-item" to="/">Recettes</router-link>
                         </div>
                     </li>
                     <li class="nav-item">
-
+                        <router-link class="nav-link" to="/contact">Contact</router-link>
                     </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">

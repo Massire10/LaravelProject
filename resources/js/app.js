@@ -25,11 +25,20 @@ import Home from './components/HomeComponent.vue';
 import Contact from './components/ContactComponent.vue';
 import Login from './components/Login.vue';
 import Recipes from './components/recipes/RecipeListComponent.vue';
+import Ajout from './components/recipes/RecipeAddComponent.vue';
 
 const routes = [
     {
         path: '/',
         redirect: '/home'
+    },
+    {
+        path: '/ajout',
+        name: 'ajout',
+        component: Ajout,
+        meta: {
+            middleware: auth
+        },
     },
     {
         path: '/home',

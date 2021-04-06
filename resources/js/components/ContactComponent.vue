@@ -4,12 +4,12 @@
             <div class="form-group">
                 <label for="name">Non complet</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name">
-                <small id="name" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <small id="name" class="form-text text-muted">Nom et Prénom.</small>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Entrer votre adresse email">
-                <small id="email" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <small id="email" class="form-text text-muted">ne jamais partager votre adresse email.</small>
             </div>
             <div class="form-group">
                 <label for="subject">Sujet</label>

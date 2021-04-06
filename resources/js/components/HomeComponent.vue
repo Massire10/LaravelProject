@@ -5,9 +5,16 @@
                 <img class="card-img-top mt-2" :src="recipe.url" :alt="recipe.title" width="50px">
                 <div class="card-body">
                     <h5 class="card-title">{{ recipe.title }}</h5>
-                    <p class="card-text">{{recipe.content}}</p>
-                    <a @click.prevent="detail(recipe)" class="btn btn-primary bottom">Voir Détails</a>
-                    <a @click.prevent="comment(recipe)" class="btn mt-2 btn-primary bottom">Commenter</a>
+                    <p class="card-text">{{recipe.content.substr(0, 60)}}...</p>
+                    <div class="row">
+                        <div class="col">
+                            <a @click.prevent="detail(recipe)" class="btn btn-primary bottom">Voir</a>
+                        </div>
+                        <div class="col">
+                            <a @click.prevent="comment(recipe)" class="btn btn-primary bottom">Commenter</a>
+                        </div>
+                    </div>
+                                       
                 </div>
             </div>
         </div>

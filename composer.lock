@@ -2410,6 +2410,16 @@
                 "laravel-json-api-paginate",
                 "spatie"
             ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-json-api-paginate/issues",
+                "source": "https://github.com/spatie/laravel-json-api-paginate/tree/1.10.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
             "time": "2020-11-27T08:21:48+00:00"
         },
         {
@@ -7058,5 +7068,6 @@
     "platform": {
         "php": "^7.3|^8.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }

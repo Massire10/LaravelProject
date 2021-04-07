@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
+use App\Repositories\ContactRepository;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -12,74 +14,24 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    private $contact_repository;
+
+    public function __construct(ContactRepository $contact_repository)
     {
-        //
+        $this->contact_repository = $contact_repository;
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @param ContactRequest $request
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function create()
+    public function store(ContactRequest $request)
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Contact $contact)
-    {
-        //
+        try{
+            $contact = $this->contact_repository->store($request);
+            return response()->json(['success' => true, 'contact' => $contact], 200);
+        }catch(\Exception $exception){
+            return response()->json(['success' => false, $exception->getMessage()], $exception->getCode());
+        }
     }
 }

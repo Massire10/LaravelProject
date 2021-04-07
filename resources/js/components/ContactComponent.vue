@@ -3,12 +3,12 @@
         <form>
             <div class="form-group">
                 <label for="name">Non complet</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name">
+                <input v-model="form.name" type="text" class="form-control" aria-describedby="name">
                 <small id="name" class="form-text text-muted">Nom et Prénom.</small>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Entrer votre adresse email">
+                <input v-model="form.email" type="text" class="form-control" aria-describedby="email" placeholder="Entrer votre adresse email">
                 <small id="email" class="form-text text-muted">ne jamais partager votre adresse email.</small>
             </div>
             <div class="form-group">
@@ -17,7 +17,7 @@
             </div>
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
+                <textarea v-model="form.message" class="form-control" id="message" rows="3"></textarea>
             </div>
             <button type="submit" @click.prevent="send()" class="btn btn-primary">Envoyer</button>
         </form>
@@ -31,15 +31,22 @@ import Swal from 'sweetalert2'
         mounted() {
             console.log('Component mounted.')
         },
-        data: {
-            'name': "",
-            'email': "",
-            'subject': "",
-            'message': ""
+        data(){
+            return{
+                form:{
+                    name: "",
+                    email: "",
+                    message: ""
+                }
+            }
         },
         methods: {
             send() {
-                Swal.fire('Hello world!')
+                this.$axios.post(`${this.api_url}/contact`, this.form).then(res => {
+                    Swal.fire({title : 'message envoyé', icon: 'success'})
+                }).catch(e => {
+                    console.log(e);
+                })
             }
         }
     }

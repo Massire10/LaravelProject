@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Recipes;
+use Carbon\Carbon;
 use Spatie\QueryBuilder\QueryBuilder;
 use Spatie\QueryBuilder\AllowedFilter as Filter;
 
@@ -21,6 +22,7 @@ class RecipesRepository
                 Filter::partial('title'),
                 Filter::partial('content'),
             ])
+            ->allowedIncludes(['comments', 'author'])
             ->jsonPaginate();
     }
 
@@ -33,6 +35,10 @@ class RecipesRepository
 
     public function store($request)
     {
+        $request = $request->request->all();
+        $request['author_id'] = auth()->user()->id;
+        $request['date'] = Carbon::now()->format('Y-m-d');
+
         $recipes = new Recipes();
         $recipes->fill($request);
         $recipes->save();
@@ -42,9 +48,21 @@ class RecipesRepository
 
     public function update($request, $id)
     {
+        $request = $request->request->all();
+        $request['author_id'] = auth()->user()->id;
+        $request['date'] = Carbon::now()->format('Y-m-d');
+
         $recipes = Recipes::findOrFail($id);
         $recipes->fill($request);
         $recipes->save();
+
+        return $recipes;
+    }
+
+    public function destroy($id)
+    {
+        $recipes = Recipes::findOrFail($id);
+        $recipes->delete();
 
         return $recipes;
     }

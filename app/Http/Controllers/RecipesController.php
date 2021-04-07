@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\RecipesRepository;
+use App\Transformers\RecipesTransformer;
 use Illuminate\Http\Request;
 
 class RecipesController extends Controller
@@ -23,7 +24,7 @@ class RecipesController extends Controller
     {
         try{
             $recipes = $this->recipes_repository->index();
-            return response()->json(['success' => true, 'recipes' => $recipes], 200);
+            return response()->json(fractal($recipes, new RecipesTransformer())->toArray(), 200);
         }catch(\Exception $exception){
             return response()->json(['success' => false, $exception->getMessage()], $exception->getCode());
         }
@@ -40,7 +41,7 @@ class RecipesController extends Controller
     {
         try{
             $recipes = $this->recipes_repository->store($request);
-            return response()->json(['success' => true, 'recipes' => $recipes], 200);
+            return response()->json(fractal($recipes, new RecipesTransformer())->toArray(), 200);
         }catch(\Exception $exception){
             return response()->json(['success' => false, $exception->getMessage()], $exception->getCode());
         }
@@ -56,6 +57,26 @@ class RecipesController extends Controller
     {
         try{
             $recipes = $this->recipes_repository->show($id);
+            return response()->json(fractal($recipes, new RecipesTransformer())->toArray(), 200);
+        }catch(\Exception $exception){
+            return response()->json(['success' => false, $exception->getMessage()], $exception->getCode());
+        }
+    }
+
+    public function update(Request $request, $id)
+    {
+        try{
+            $recipes = $this->recipes_repository->update($request, $id);
+            return response()->json(['success' => true, 'recipes' => $recipes], 200);
+        }catch(\Exception $exception){
+            return response()->json(['success' => false, $exception->getMessage()], $exception->getCode());
+        }
+    }
+
+    public function destroy($id)
+    {
+        try{
+            $recipes = $this->recipes_repository->destroy($id);
             return response()->json(['success' => true, 'recipes' => $recipes], 200);
         }catch(\Exception $exception){
             return response()->json(['success' => false, $exception->getMessage()], $exception->getCode());

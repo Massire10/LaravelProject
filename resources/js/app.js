@@ -26,6 +26,7 @@ import Contact from './components/ContactComponent.vue';
 import Login from './components/Login.vue';
 import Recipes from './components/recipes/RecipeListComponent.vue';
 import Ajout from './components/recipes/RecipeAddComponent.vue';
+import login from "./middleware/login";
 
 const routes = [
     {
@@ -68,7 +69,10 @@ const routes = [
     {
         path: '/login',
         name: 'login',
-        component: Login
+        component: Login,
+        meta: {
+            middleware: login
+        },
     }
 ];
 

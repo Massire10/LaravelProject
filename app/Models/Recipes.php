@@ -13,7 +13,6 @@ class Recipes extends Model
     protected $table = 'recipes';
     public $timestamps = true;
 
-
     protected $fillable = [
         'title',
         'content',
@@ -42,6 +41,11 @@ class Recipes extends Model
 
     public function author()
     {
-        return $this->belongsTo(User::class, 'id', 'author_id');
+        return $this->belongsTo(User::class, 'author_id', 'id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comments::class, 'recipe_id', 'id');
     }
 }

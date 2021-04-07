@@ -52,7 +52,7 @@
                    <li class="page-item disabled">
                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Page {{pagination.current_page}} sur {{pagination.total_pages}}</a>
                    </li>
-                   <li :class="pagination.current_page === index+1 ? 'active' : ''" v-for="(item,index) in pagination.total_pages" class="page-item"><a @click="paginate(index+1)" class="page-link" href="#">{{index + 1}}</a></li>
+                   <li :class="pagination.current_page === index+1 ? 'active' : ''" v-for="(item,index) in pagination.total_pages" :key="index" class="page-item"><a @click="paginate(index+1)" class="page-link" href="#">{{index + 1}}</a></li>
                </ul>
            </nav>
        </div>

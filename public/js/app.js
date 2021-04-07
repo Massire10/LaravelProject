@@ -43226,6 +43226,7 @@ var render = function() {
               return _c(
                 "li",
                 {
+                  key: index,
                   staticClass: "page-item",
                   class:
                     _vm.pagination.current_page === index + 1 ? "active" : ""

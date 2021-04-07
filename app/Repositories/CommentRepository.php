@@ -35,7 +35,6 @@ class CommentRepository
         $request = $request->request->all();
         $request['author_id'] = auth()->user()->id;
         $request['date'] = Carbon::now()->format('Y-m-d');
-
         $comment = new Comments();
         $comment->fill($request);
         $comment->save();

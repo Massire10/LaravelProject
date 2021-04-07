@@ -41,11 +41,11 @@
                         <router-link class="nav-link" to="/contact">Contact</router-link>
                     </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
+                    <div v-if="true" class="form-inline my-2 my-lg-0">
                         <router-link to="/login">
                             <a class="text-white my-2 my-sm-0" onClick="logout()">Se déconnecter</a>
                         </router-link>
-                    </form>
+                    </div>
                 </div>
             </nav>
             <div class="container">
@@ -57,7 +57,6 @@
 
             function logout (){
                this.$cookies.remove('token');
-                console.log('ref', this)
             }
         </script>
         <script src="{{ asset('js/app.js')}}"></script>

@@ -25,6 +25,7 @@ import Home from './components/HomeComponent.vue';
 import Contact from './components/ContactComponent.vue';
 import Login from './components/Login.vue';
 import Recipes from './components/recipes/RecipeListComponent.vue';
+import AdminRecipes from './components/recipes/admin/RecipesListAdminComponent.vue';
 import Ajout from './components/recipes/RecipeAddComponent.vue';
 import login from "./middleware/login";
 
@@ -62,6 +63,14 @@ const routes = [
         path: '/contact',
         name: 'contact',
         component: Contact,
+        meta: {
+            middleware: auth
+        },
+    },
+    {
+        path: '/admin/recettes',
+        name: 'recetteadmin',
+        component: AdminRecipes,
         meta: {
             middleware: auth
         },

@@ -2639,6 +2639,18 @@ var routes = [{
   component: _components_recipes_admin_RecipesListAdminComponent_vue__WEBPACK_IMPORTED_MODULE_8__.default,
   meta: {
     middleware: _middleware_auth__WEBPACK_IMPORTED_MODULE_0__.default
+  },
+  beforeEnter: function beforeEnter(to, from, next) {
+    if (vue_cookies__WEBPACK_IMPORTED_MODULE_3___default().get('roles') === 'admin') {
+      next('/admin/recettes');
+    } else next();
+  }
+}, {
+  path: '/admin/recettes',
+  name: 'admin-recette',
+  component: _components_recipes_admin_RecipesListAdminComponent_vue__WEBPACK_IMPORTED_MODULE_8__.default,
+  meta: {
+    middleware: _middleware_auth__WEBPACK_IMPORTED_MODULE_0__.default
   }
 }, {
   path: '/contact',

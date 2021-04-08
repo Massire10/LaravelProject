@@ -58,6 +58,22 @@ const routes = [
         meta: {
             middleware: auth
         },
+        beforeEnter: (to, from, next) => {
+            if(VueCookies.get('roles') === 'admin'){
+                next('/admin/recettes');
+            }
+            else next()
+
+        },
+    },
+    {
+
+        path: '/admin/recettes',
+        name: 'admin-recette',
+        component: AdminRecipes,
+        meta: {
+            middleware: auth
+        },
     },
     {
         path: '/contact',

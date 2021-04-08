@@ -306,12 +306,17 @@
                             <router-link class="nav-link" to="/contact">Contact</router-link>
                         </li>
                     </ul>
-                    <div v-if="true" class="form-inline my-2 my-lg-0">
+
+                    @php
+                        if(isset($_COOKIE['token']))
+                            echo '<div class="form-inline my-2 my-lg-0">
                         <router-link to="/login">
-                            <a class="text-white my-2 my-sm-0" onClick="logout()">Se déconnecter</a>
+                            <a class="text-white my-2 my-sm-0" onClick="logout()">
+                                Se déconnecter
+                            </a>
                         </router-link>
-                    </div>
-                </div>
+                    </div>';
+                    @endphp
             </nav>
             <div class="container mb-5">
                 <router-view></router-view>
@@ -323,7 +328,7 @@
                             <p id="title">Cool and Perfect Snippet code</p>
                         </div>
                         <div id="explore">
-                            <p id="txt1">Explore</p> <a class="link" href="#">Home</a> <a class="link" href="#">About</a>
+                            <p id="txt1">Explore</p> <a class="link" href="#/home">Home</a>
                         </div>
                         <div id="visit">
                             <p id="txt2">Visit</p>
@@ -341,7 +346,7 @@
                         </div>
                     </div>
                     <div id="part2">
-                        <p id="txt6"><i class="material-icons tiny"> copyright</i>copyright 2021 SchoolProject - All right reserved</p>
+                        <p id="txt6"><i class="material-icons tiny"></i>copyright 2021 SchoolProject - All right reserved</p>
                     </div>
                 </div>
             </div>

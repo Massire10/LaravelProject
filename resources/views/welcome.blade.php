@@ -302,14 +302,6 @@
                         <li class="nav-item">
                             <router-link class="nav-link" to="/recettes">Recettes</router-link>
                         </li>
-                        <li class="nav-item dropdown">
-                            <router-link to="/ingredients" class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recettes</router-link>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <router-link class="dropdown-item" to="/ajout">Ajouter recettes</router-link>
-                                <router-link class="dropdown-item" to="/admin/recettes">Liste des recettes</router-link>
-                                <div class="dropdown-divider"></div>
-                            </div>
-                        </li>
                         <li class="nav-item">
                             <router-link class="nav-link" to="/contact">Contact</router-link>
                         </li>
@@ -358,9 +350,10 @@
 
             function logout (){
                this.$cookies.remove('token');
+               this.$cookies.remove('roles');
             }
         </script>
         <script src="{{ asset('js/app.js')}}"></script>
-        
+
     </body>
 </html>

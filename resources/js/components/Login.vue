@@ -38,6 +38,7 @@ export default {
                 console.log('res', res)
                 axios.defaults.headers.common['Authorization'] = 'bearer' + res.data.token;
                 this.$cookies.set('token', res.data.token,res.data.token_validity);
+                this.$cookies.set('roles', res.data.has_roles);
                 this.$router.push({name: 'home'})
             }).catch(e => {
                 console.log(e);

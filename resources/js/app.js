@@ -54,7 +54,7 @@ const routes = [
 
         path: '/recettes',
         name: 'recette',
-        component: Recipes,
+        component: AdminRecipes,
         meta: {
             middleware: auth
         },
@@ -63,14 +63,6 @@ const routes = [
         path: '/contact',
         name: 'contact',
         component: Contact,
-        meta: {
-            middleware: auth
-        },
-    },
-    {
-        path: '/admin/recettes',
-        name: 'recetteadmin',
-        component: AdminRecipes,
         meta: {
             middleware: auth
         },

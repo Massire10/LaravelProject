@@ -18,5 +18,6 @@ Route::group(['middleware' => 'api', 'namespace'  => 'App\Http\Controllers', 'pr
     Route::get('/', 'RecipesController@index');
     Route::get('/{id}', 'RecipesController@show');
     Route::post('/', 'RecipesController@store');
-    Route::put('/', 'RecipesController@update');
+    Route::put('/{id}', 'RecipesController@update');
+    Route::delete('/{id}', 'RecipesController@destroy');
 });

@@ -42,6 +42,7 @@ class RecipesTransformer extends TransformerAbstract
             'content' => $obj->content,
             'ingredients' => $obj->ingredients,
             'url' => $obj->url,
+            'date' => $obj->date,
         ];
     }
 

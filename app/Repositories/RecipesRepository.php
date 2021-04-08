@@ -21,6 +21,9 @@ class RecipesRepository
             ->allowedFilters([
                 Filter::partial('title'),
                 Filter::partial('content'),
+                Filter::partial('ingredients'),
+                Filter::partial('date'),
+                Filter::partial('status'),
             ])
             ->allowedIncludes(['comments', 'author'])
             ->jsonPaginate();

@@ -15,6 +15,7 @@
             #contain {
                 width: 100%;
                 height: 330px;
+                margin-top: 25%
             }
 
             #part1 {
@@ -329,9 +330,9 @@
                         </div>
                         <div id="explore">
                             <p id="txt1">Explorer</p> 
-                            <a class="link" href="#">Accueil</a> 
-                            <a class="link" href="#">Recette</a>
-                            <a class="link" href="#">Contact</a>
+                            <a class="link" href="#/home">Accueil</a> 
+                            <a class="link" href="#/recettes">Recette</a>
+                            <a class="link" href="#/contact">Contact</a>
                         </div>
                         <div id="visit">
                             <p id="txt2">Visit</p>

@@ -1883,7 +1883,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'ContactComponent',
@@ -43259,13 +43258,7 @@ var render = function() {
               _vm.$set(_vm.form, "email", $event.target.value)
             }
           }
-        }),
-        _vm._v(" "),
-        _c(
-          "small",
-          { staticClass: "form-text text-muted", attrs: { id: "email" } },
-          [_vm._v("ne jamais partager votre adresse email.")]
-        )
+        })
       ]),
       _vm._v(" "),
       _vm._m(0),

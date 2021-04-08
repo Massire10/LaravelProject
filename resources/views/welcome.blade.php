@@ -14,7 +14,7 @@
         <style lang="scss" scoped>
             #contain {
                 width: 100%;
-                height: 330px
+                height: 330px;
             }
 
             #part1 {
@@ -316,35 +316,38 @@
             <div class="container mb-5">
                 <router-view></router-view>
             </div>
-            <div class="pt-5">
+            <footer class="pt-5">
                 <div id="contain">
                     <div id="part1">
                         <div id="companyinfo"> <a id="sitelink" href="#">SchoolProject</a>
-                            <p id="title">Cool and Perfect Snippet code</p>
+                            <p id="title">Site de recettes</p>
                         </div>
                         <div id="explore">
-                            <p id="txt1">Explore</p> <a class="link" href="#">Home</a> <a class="link" href="#">About</a>
+                            <p id="txt1">Explorer</p> 
+                            <a class="link" href="#">Accueil</a> 
+                            <a class="link" href="#">Recette</a>
+                            <a class="link" href="#">Contact</a>
                         </div>
                         <div id="visit">
                             <p id="txt2">Visit</p>
-                            <p class="text">Lincoln House </p>
-                            <p class="text">78 Bhulabhai Desai Road </p>
-                            <p class="text">Mumbai 400 026 </p>
+                            <p class="text">2 Boulevard Arago </p>
+                            <p class="text">75013 Paris</p>
+                            <p class="text">+331 06 25 84 74 </p>
                         </div>
                         <div id="legal">
                             <p id="txt3">Legal</p> <a class="link1" href="#">Terms and Conditions</a> <a class="link1" href="#">Private Policy</a>
                         </div>
                         <div id="subscribe">
-                            <p id="txt4">Subscribe to US</p>
+                            <p id="txt4">Newsletter</p>
                             <form> <input id="email" type="email" placeholder="Email"> </form> <a class="waves-effect waves-light btn">Subscribe</a>
-                            <p id="txt5">Connect With US</p> <i class="fab fa-facebook-square social fa-2x"></i> <i class="fab fa-linkedin social fa-2x"></i> <i class="fab fa-twitter-square social fa-2x"></i>
+                            <p id="txt5">Connectez vous à nous</p> <i class="fab fa-facebook-square social fa-2x"></i> <i class="fab fa-linkedin social fa-2x"></i> <i class="fab fa-twitter-square social fa-2x"></i>
                         </div>
                     </div>
                     <div id="part2">
                         <p id="txt6"><i class="material-icons tiny"> copyright</i>copyright 2021 SchoolProject - All right reserved</p>
                     </div>
                 </div>
-            </div>
+            </footer>
         </div>
         <script type="text/javascript" >
 

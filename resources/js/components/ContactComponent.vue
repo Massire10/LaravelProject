@@ -9,7 +9,6 @@
             <div class="form-group">
                 <label for="email">Email</label>
                 <input v-model="form.email" type="text" class="form-control" aria-describedby="email" placeholder="Entrer votre adresse email">
-                <small id="email" class="form-text text-muted">ne jamais partager votre adresse email.</small>
             </div>
             <div class="form-group">
                 <label for="subject">Sujet</label>

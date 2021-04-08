@@ -31,7 +31,7 @@
                     <div v-for="(comment) in recipe.comments.data" :key="comment.id"  class="list-group">
                         <a class="list-group-item mt-1 list-group-item-action" aria-current="true">
                             <div class="d-flex w-100 justify-content-between">
-                                <small>le {{ new Date(comment.date).toLocaleDateString("en-US")}}</small>
+                                <small>le {{ new Date(comment.date).toLocaleDateString("fr-FR")}}</small>
                             </div>
                             <small>{{comment.content}}</small>
                         </a>

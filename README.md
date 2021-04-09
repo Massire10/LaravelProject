@@ -31,3 +31,23 @@
     npm run watch
 
 ## Fonctionnalités du projet
+
+* Authentification (jwt)
+* CRUD recettes
+* CRUD commentaires
+* CRUD contact
+* Framework Vuejs
+* Vuejs Navigation Guards
+* Bootstrap
+
+## Les plus
+
+* Spatie Laravel Query Builder : <a href="https://github.com/spatie/laravel-query-builder" >lien</a>
+
+    Ce package vous permet de filtrer, trier et inclure des relations éloquentes en fonction d'une demande
+  
+
+* Spatie Laravel Permission : <a href="https://github.com/spatie/laravel-permission" >lien</a>
+* Spatie Laravel Fractal : <a href="https://github.com/spatie/laravel-fractal" >lien</a>
+
+

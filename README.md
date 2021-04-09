@@ -22,7 +22,12 @@
     php artisan make:seed --class=RecipesSeeder
     php artisan make:seed --class=CommentsSeeder
 
+## Jwt
+    php artisan jwt:secret
+
 ## Pour le front en vuejs
     npm install 
     npm run dev
     npm run watch
+
+## Fonctionnalités du projet

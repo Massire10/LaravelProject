@@ -15,7 +15,7 @@
             #contain {
                 width: 100%;
                 height: 330px;
-                margin-top: 25%
+                margin-top: 20%;
             }
 
             #part1 {

@@ -1900,11 +1900,16 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     send: function send() {
+      var _this = this;
+
       this.$axios.post("".concat(this.api_url, "/contact"), this.form).then(function (res) {
         sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
           title: 'message envoyé',
           icon: 'success'
         });
+        _this.form.name = "";
+        _this.form.email = "";
+        _this.form.message = "";
       })["catch"](function (e) {
         console.log(e);
       });

@@ -43,6 +43,9 @@ import Swal from 'sweetalert2'
             send() {
                 this.$axios.post(`${this.api_url}/contact`, this.form).then(res => {
                     Swal.fire({title : 'message envoyé', icon: 'success'})
+                    this.form.name = "";
+                    this.form.email = "";
+                    this.form.message = "";
                 }).catch(e => {
                     console.log(e);
                 })

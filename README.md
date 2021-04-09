@@ -7,6 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Frameworks utilisés
+    Laravel 8 et Vuejs 2.5.17
+    
 ## Cloner le projet
     git clone https://github.com/Massire10/LaravelProject.git
     cd LaravelProject
@@ -14,6 +17,9 @@
 ## Installer les dépendances pour composer
     composer install
 
+## Céer un fichier database.sqlite dans le dossier app/database du projet
+    Configurer l'accés dans un fichier .env
+    
 ## Migreer la base de données
     php artisan migrate
 
@@ -31,12 +37,12 @@
     npm run watch
 
 ## Fonctionnalités du projet
-
+* TP2 Complet
 * Authentification (jwt)
 * CRUD recettes
 * CRUD commentaires
 * CRUD contact
-* Framework Vuejs
+* Utilisation du Framework Vuejs
 * Vuejs Navigation Guards
 * Bootstrap
 
@@ -44,7 +50,7 @@
 
 * Spatie Laravel Query Builder : <a href="https://github.com/spatie/laravel-query-builder" >lien</a>
 
-    Ce package vous permet de filtrer, trier et inclure des relations éloquentes en fonction d'une demande
+    Ce package permet de filtrer, trier et inclure des relations éloquentes en fonction d'une demande
   
 
 * Spatie Laravel Permission : <a href="https://github.com/spatie/laravel-permission" >lien</a>

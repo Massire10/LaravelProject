@@ -20,7 +20,7 @@
 ## Céer un fichier database.sqlite dans le dossier app/database du projet
     Configurer l'accés dans un fichier .env
     
-## Migreer la base de données
+## Migrer la base de données
     php artisan migrate
 
 ## Lancer les seed

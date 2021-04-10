@@ -17,16 +17,16 @@
 ## Installer les dépendances pour composer
     composer install
 
-## Céer un fichier database.sqlite dans le dossier app/database du projet
+## Créer un fichier database.sqlite dans le dossier app/database du projet
     Configurer l'accés dans un fichier .env
     
 ## Migrer la base de données
     php artisan migrate
 
 ## Lancer les seed
-    php artisan make:seed --class=UserSeeder
-    php artisan make:seed --class=RecipesSeeder
-    php artisan make:seed --class=CommentsSeeder
+    php artisan db:seed --class=UserSeeder
+    php artisan db:seed --class=RecipesSeeder
+    php artisan db:seed --class=CommentsSeeder
 
 ## Jwt
     php artisan jwt:secret

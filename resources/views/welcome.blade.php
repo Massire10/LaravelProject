@@ -336,8 +336,8 @@
                         </div>
                         <div id="visit">
                             <p id="txt2">Visit</p>
-                            <p class="text">2 Boulevard Arago </p>
-                            <p class="text">75013 Paris</p>
+                            <p class="text">53 Cours de libération </p>
+                            <p class="text">38100 Grenoble</p>
                             <p class="text">+331 06 25 84 74 </p>
                         </div>
                         <div id="legal">
